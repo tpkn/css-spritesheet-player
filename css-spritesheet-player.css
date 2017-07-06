@@ -112,9 +112,6 @@
 }
 
 .cssprite__frame .cssprite__image {
-  position: absolute;
-  left: 0;
-  top: 0;
   width: 100%;
   height: 100%;
   background-image: url("BigBuckBunny_320x180_235f.jpg");
