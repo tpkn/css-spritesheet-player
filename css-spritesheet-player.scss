@@ -1,0 +1,89 @@
+/*!
+ * CSS Sprite Sheet Player (v1.0.2.20160411), http://tpkn.me/
+ */
+
+$sprite_file    : 'BigBuckBunny_320x180_235f.jpg';
+
+$sprite_width   : 5120;
+$sprite_height  : 2700;
+
+$frame_width    : 320;
+$frame_height   : 180;
+
+$total_duration : 20; // seconds
+
+$looped         : true;
+
+$rule_prefix    : 'cssprite';
+
+$x_frames       : $sprite_width / $frame_width;
+$y_frames       : $sprite_height / $frame_height;
+$x_duration     : $total_duration / $x_frames;
+$y_duration     : $total_duration / $y_frames;
+
+
+.#{$rule_prefix}__frame {
+	overflow: hidden;
+
+	position: relative;
+	width: #{$frame_width}px;
+	height: #{$frame_height}px;
+
+	box-sizing: border-box;
+	border: 1px solid #000000;
+
+	div {
+		box-sizing: border-box;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+
+	.#{$rule_prefix}__x {
+		width: 100%;
+		height: 100%;
+
+		@if($looped){
+			animation: #{$rule_prefix}__x #{$y_duration}s steps($x_frames) 0s infinite;
+		}@else{
+			animation: #{$rule_prefix}__x #{$x_duration}s steps($x_frames) 0s $y_frames;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes #{$rule_prefix}__x {
+			0%   { left: 0; }
+			100% { left: -#{$sprite_width}px; }
+		}
+	}
+
+
+	.#{$rule_prefix}__y {
+		width: #{$sprite_width}px;
+		height: #{$sprite_height}px;
+		
+		@if($looped){
+			animation: #{$rule_prefix}__y #{$total_duration}s steps($y_frames) 0s infinite;
+		}@else{
+			animation: #{$rule_prefix}__y #{$total_duration}s steps($y_frames) 0s 1;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes #{$rule_prefix}__y {
+			0%   { top: 0; }
+			100% { top: -#{$sprite_height}px; }
+		}
+	}
+	.#{$rule_prefix}__image {
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		width: 100%;
+		height: 100%;
+
+		background-image: url('#{$sprite_file}');
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}

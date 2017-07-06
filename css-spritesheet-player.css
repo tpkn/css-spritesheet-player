@@ -1,0 +1,126 @@
+/*!
+ * CSS Sprite Sheet Player (v1.0.2.20160411), http://tpkn.me/
+ */
+.cssprite__frame {
+  overflow: hidden;
+  position: relative;
+  width: 320px;
+  height: 180px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #000000;
+}
+
+.cssprite__frame div {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.cssprite__frame .cssprite__x {
+  width: 100%;
+  height: 100%;
+  -webkit-animation: cssprite__x 1.33333s steps(16) 0s infinite;
+  -moz-animation: cssprite__x 1.33333s steps(16) 0s infinite;
+  -o-animation: cssprite__x 1.33333s steps(16) 0s infinite;
+  animation: cssprite__x 1.33333s steps(16) 0s infinite;
+}
+
+@-webkit-keyframes cssprite__x {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -5120px;
+  }
+}
+
+@-moz-keyframes cssprite__x {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -5120px;
+  }
+}
+
+@-o-keyframes cssprite__x {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -5120px;
+  }
+}
+
+@keyframes cssprite__x {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: -5120px;
+  }
+}
+
+.cssprite__frame .cssprite__y {
+  width: 5120px;
+  height: 2700px;
+  -webkit-animation: cssprite__y 20s steps(15) 0s infinite;
+  -moz-animation: cssprite__y 20s steps(15) 0s infinite;
+  -o-animation: cssprite__y 20s steps(15) 0s infinite;
+  animation: cssprite__y 20s steps(15) 0s infinite;
+}
+
+@-webkit-keyframes cssprite__y {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -2700px;
+  }
+}
+
+@-moz-keyframes cssprite__y {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -2700px;
+  }
+}
+
+@-o-keyframes cssprite__y {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -2700px;
+  }
+}
+
+@keyframes cssprite__y {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -2700px;
+  }
+}
+
+.cssprite__frame .cssprite__image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("BigBuckBunny_320x180_235f.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  -moz-background-size: contain;
+  -o-background-size: contain;
+  background-size: contain;
+}
