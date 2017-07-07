@@ -39,6 +39,23 @@ $y_duration     : $total_duration / $y_frames;
       top: 0;
    }
 
+   .#{$rule_prefix}__y {
+      width: #{$sprite_width}px;
+      height: #{$sprite_height}px;
+      
+      @if($looped){
+         animation: #{$rule_prefix}__y #{$total_duration}s steps($y_frames) 0s infinite;
+      }@else{
+         animation: #{$rule_prefix}__y #{$total_duration}s steps($y_frames) 0s 1;
+         animation-fill-mode: forwards;
+      }
+
+      @keyframes #{$rule_prefix}__y {
+         0%   { top: 0; }
+         100% { top: -#{$sprite_height}px; }
+      }
+   }
+
    .#{$rule_prefix}__x {
       width: 100%;
       height: 100%;
@@ -56,23 +73,6 @@ $y_duration     : $total_duration / $y_frames;
       }
    }
 
-
-   .#{$rule_prefix}__y {
-      width: #{$sprite_width}px;
-      height: #{$sprite_height}px;
-      
-      @if($looped){
-         animation: #{$rule_prefix}__y #{$total_duration}s steps($y_frames) 0s infinite;
-      }@else{
-         animation: #{$rule_prefix}__y #{$total_duration}s steps($y_frames) 0s 1;
-         animation-fill-mode: forwards;
-      }
-
-      @keyframes #{$rule_prefix}__y {
-         0%   { top: 0; }
-         100% { top: -#{$sprite_height}px; }
-      }
-   }
    .#{$rule_prefix}__image {
       width: 100%;
       height: 100%;
