@@ -2,7 +2,7 @@
 
 
 | Variable | Type | Description |
-| ------------- | ------------- | ------------- |
+|-------------|:-------------:|-------------|
 | `$sprite_file` | String | sprite sheet file path |
 | `$sprite_width` | Number | - |
 | `$sprite_height` | Number | - |
